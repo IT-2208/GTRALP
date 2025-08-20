@@ -3,7 +3,21 @@ name: Generate QR Code
 on:
   push:
     paths:
+      - GTRALP/GTRALP001.html
       - GTRALP/GTRALP002.html
+      - GTRALP/GTRALP003.html
+      - GTRALP/GTRALP004.html
+      - GTRALP/GTRALP005.html
+      - GTRALP/GTRALP006.html
+      - GTRALP/GTRALP007.html
+      - GTRALP/GTRALP008.html
+      - GTRALP/GTRALP009.html
+      - GTRALP/GTRALP010.html
+      - GTRALP/GTRALP011.html
+      - GTRALP/GTRALP012.html
+      - GTRALP/GTRALP013.html
+      - GTRALP/GTRALP014.html
+      - GTRALP/GTRALP015.html
       - generate_qr.py  # Trigger if this script changes (optional)
 
 jobs:
