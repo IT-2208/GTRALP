@@ -48,3 +48,4 @@ jobs:
           git add GTRALP/*.png
           git diff --quiet --cached || git commit -m 'Auto-generate QR codes for GTRALP HTML files'
           git push
+ 
