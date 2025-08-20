@@ -3,21 +3,21 @@ name: Generate QR Codes
 on:
   push:
     paths:
-      - GTRALP/GTRALP001.html
-      - GTRALP/GTRALP002.html
-      - GTRALP/GTRALP003.html
-      - GTRALP/GTRALP004.html
-      - GTRALP/GTRALP005.html
-      - GTRALP/GTRALP006.html
-      - GTRALP/GTRALP007.html
-      - GTRALP/GTRALP008.html
-      - GTRALP/GTRALP009.html
-      - GTRALP/GTRALP010.html
-      - GTRALP/GTRALP011.html
-      - GTRALP/GTRALP012.html
-      - GTRALP/GTRALP013.html
-      - GTRALP/GTRALP014.html
-      - GTRALP/GTRALP015.html
+      - GTRALP001.html
+      - GTRALP002.html
+      - GTRALP003.html
+      - GTRALP004.html
+      - GTRALP005.html
+      - GTRALP006.html
+      - GTRALP007.html
+      - GTRALP008.html
+      - GTRALP009.html
+      - GTRALP010.html
+      - GTRALP011.html
+      - GTRALP012.html
+      - GTRALP013.html
+      - GTRALP014.html
+      - GTRALP015.html
       - generate_qr.py
 
 jobs:
@@ -45,7 +45,6 @@ jobs:
         run: |
           git config user.name 'github-actions'
           git config user.email 'github-actions@github.com'
-          git add GTRALP/*.png
-          git diff --quiet --cached || git commit -m 'Auto-generate QR codes for GTRALP HTML files'
+          git add *.png
+          git diff --quiet --cached || git commit -m '🔁 Auto-generated QR codes'
           git push
- 
