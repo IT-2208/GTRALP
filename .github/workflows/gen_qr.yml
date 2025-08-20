@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - GTRALP/GTRALP002.html
+      - generate_qr.py  # Trigger if this script changes (optional)
 
 jobs:
   generate_qr:
@@ -22,12 +23,7 @@ jobs:
         run: pip install qrcode[pil]
 
       - name: Generate QR Code
-        run: |
-          python -c "
-import qrcode
-img = qrcode.make('https://it-2208.github.io/GTRALP/GTRALP001.html')
-img.save('GTRALP/GTRALP002_qr.png')
-"
+        run: python generate_qr.py
 
       - name: Commit QR Code
         run: |
