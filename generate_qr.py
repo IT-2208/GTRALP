@@ -3,7 +3,7 @@ import os
 
 os.makedirs('GTRALP', exist_ok=True)
 
-base_url = 'https://it-2208.github.io/GTRALP/'
+base_url = 'https://it-2208.github.io/'
 
 for i in range(1, 16):  # 1 to 15 inclusive
     file_html = f'GTRALP/GTRALP{i:03}.html'      # GTRALP001.html etc.
