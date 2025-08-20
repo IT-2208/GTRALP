@@ -3,21 +3,7 @@ name: Generate QR Codes
 on:
   push:
     paths:
-      - GTRALP001.html
-      - GTRALP002.html
-      - GTRALP003.html
-      - GTRALP004.html
-      - GTRALP005.html
-      - GTRALP006.html
-      - GTRALP007.html
-      - GTRALP008.html
-      - GTRALP009.html
-      - GTRALP010.html
-      - GTRALP011.html
-      - GTRALP012.html
-      - GTRALP013.html
-      - GTRALP014.html
-      - GTRALP015.html
+      - GTRALP*.html
       - generate_qr.py
 
 jobs:
@@ -25,26 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: 📥 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: 📦 Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install qrcode[pil]
 
-      - name: Generate QR Codes
+      - name: 🧾 Run QR code generator
         run: python generate_qr.py
 
-      - name: Commit QR Codes
+      - name: 🚀 Commit QR codes
         run: |
           git config user.name 'github-actions'
           git config user.email 'github-actions@github.com'
           git add *.png
-          git diff --quiet --cached || git commit -m '🔁 Auto-generated QR codes'
+          git diff --quiet --cached || git commit -m "🔁 Auto-generated QR codes"
           git push
