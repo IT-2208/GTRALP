@@ -5,7 +5,7 @@ import os
 base_url = 'https://it-2208.github.io/GTRALP/'
 
 # Generate QR for files GTRALP001.html to GTRALP015.html
-for i in range(1, 16):
+for i in range(1, 18):
     filename = f'GTRALP{i:03}.html'
     output_image = f'GTRALP{i:03}_qr.png'
     url = base_url + filename
