@@ -13,3 +13,4 @@ for i in range(1, 16):
     img.save(output_image)
     print(f"✅ QR generated for {url} → {output_image}")
  
+ 
