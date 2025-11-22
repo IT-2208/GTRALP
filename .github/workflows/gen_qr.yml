@@ -37,3 +37,4 @@ jobs:
           git add *.png
           git diff --quiet --cached || git commit -m "🔁 Auto-generated QR codes"
           git push
+
